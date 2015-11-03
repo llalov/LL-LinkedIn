@@ -78,7 +78,7 @@ namespace LL_LinkedIn.Models
             set { this.groups = value; }
         }
 
-        public virtual ICollection<UserSkill> UserSkills
+        public virtual ICollection<UserSkill> Skills
         {
             get { return this.skills; }
             set { this.skills = value; }

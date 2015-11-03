@@ -23,8 +23,11 @@ namespace LL_LinkedIn.Web.ViewModels
                     Fullname = x.Fullname,
                     AvatarUrl = x.AvatarUrl,
                     Certifications = x.Certifications
-                    .AsQueryable()
-                    .Select(CertificationViewModel.ViewModel)
+                        .AsQueryable()
+                        .Select(CertificationViewModel.ViewModel),
+                    Skills = x.Skills
+                        .AsQueryable()
+                        .Select(SkillViewModel.ViewModel)
                     
                 };
             }
@@ -47,7 +50,7 @@ namespace LL_LinkedIn.Web.ViewModels
 
         public IEnumerable<CertificationViewModel> Certifications { get; set; }
 
-       
+        public IEnumerable<SkillViewModel> Skills { get; set; }
        
     }
 }

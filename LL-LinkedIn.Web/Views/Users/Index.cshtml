@@ -22,4 +22,10 @@
 @Html.DisplayNameFor(x => x.ContactInfo.Website) @Html.DisplayFor(x => x.ContactInfo.Website)
 <br/>
 
-@Html.DisplayFor(x => x.Certifications);
+@Html.DisplayFor(x => x.Certifications)
+
+@Html.DisplayFor(x => x.Skills)
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

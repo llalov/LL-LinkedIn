@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 using LL_LinkedIn.Data;
 using LL_LinkedIn.Web.ViewModels;
@@ -17,7 +18,11 @@ namespace LL_LinkedIn.Web.Controllers
             var user = this.Data
                 .Users
                 .All()
-                .Where(u => u.UserName == username)
+                .Include(x => x.Certifications)
+                .Include(x => x.Skills)
+                .Include("Skills.Skill")
+                .Include("Skills.Skill.User")
+                .Where(x => x.UserName == username)
                 .Select(UserViewModel.ViewModel)
                 .FirstOrDefault();
             if (user == null)
@@ -26,6 +31,13 @@ namespace LL_LinkedIn.Web.Controllers
             }
 
             return this.View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EndorseUserForSkill(int id)
+        {
+            return this.Content("Hi");
         }
     }
 }
