@@ -1,0 +1,25 @@
+﻿@model LL_LinkedIn.Web.ViewModels.UserViewModel
+
+<h1>@Html.DisplayFor(x => x.UserName)</h1>
+
+<img src="@Model.AvatarUrl" alt="@Model.UserName" width="200"/>
+
+@Html.DisplayNameFor(x => x.Email) @Html.DisplayFor(x => x.Email)
+<br/>
+
+@Html.DisplayNameFor(x => x.Fullname) @Html.DisplayFor(x => x.Fullname)
+<br/>
+
+@Html.DisplayNameFor(x => x.ContactInfo.Facebook) @Html.DisplayFor(x => x.ContactInfo.Facebook)
+<br/>
+
+@Html.DisplayNameFor(x => x.ContactInfo.Twitter) @Html.DisplayFor(x => x.ContactInfo.Twitter)
+<br/>
+
+@Html.DisplayNameFor(x => x.ContactInfo.Phone) @Html.DisplayFor(x => x.ContactInfo.Phone)
+<br />
+
+@Html.DisplayNameFor(x => x.ContactInfo.Website) @Html.DisplayFor(x => x.ContactInfo.Website)
+<br/>
+
+@Html.DisplayFor(x => x.Certifications);

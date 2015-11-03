@@ -15,6 +15,10 @@ namespace LL_LinkedIn.Web.Controllers
 
         public ActionResult Index()
         {
+            if (this.UserProfile != null)
+            {
+                this.ViewBag.Username = this.UserProfile.UserName;
+            }
             return View();
         }
 

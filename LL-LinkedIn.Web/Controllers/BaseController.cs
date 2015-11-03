@@ -14,7 +14,7 @@ namespace LL_LinkedIn.Web.Controllers
 
         protected BaseController(ILL_LinkedInData data)
         {
-            this.data = data;
+            this.Data = data;
         }
 
         protected BaseController(ILL_LinkedInData data, User userProfile)
