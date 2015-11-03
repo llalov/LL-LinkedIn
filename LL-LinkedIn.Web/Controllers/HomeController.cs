@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LL_LinkedIn.Data;
 
 namespace LL_LinkedIn.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        public HomeController(ILL_LinkedInData data) : base(data)
+        {
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -26,5 +31,7 @@ namespace LL_LinkedIn.Web.Controllers
 
             return View();
         }
+
+        
     }
 }
