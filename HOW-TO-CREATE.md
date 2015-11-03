@@ -1,4 +1,4 @@
-I.
+Part I
 	1. Create a new new Blank Solution project 
 	2. Add folders Common, Data, External Libraries, Web
 	3. In web folder add new ASP.NET Web Application with name (projName.Web) -> MVC
@@ -20,7 +20,7 @@ I.
 	12. Web->Models->AccountViewModels-> edit LoginViewModel, RegisterViewModel 
 	13. In AccountController -> Login-> change model.email with model.UserName; Register-> change UserName = model.email (UserName)
 	14. Web->Views->Account->Login.cshtml -> change to log with username not email; Register.cshtml-> add one more input field like email, for username.
-II.
+Part II
 	1. Create Models
 	2. Open Package Manager Console, in projName.Data (where ApplicationDbContext.cs is) and type: 'Enable-Migrations -EnableAutomaticMigrations'
 	3. ApplicationDbContext.cs-> 'Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());'
